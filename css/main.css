@@ -1,0 +1,100 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --primarey-color: #0d6efd;
+  --section-color: #eff7fa;
+  --red-color: #f00;
+}
+.main-btn {
+  background-color: var(--primarey-color);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+/*navbar*/
+.navbar {
+  background-color: var(--dark-color);
+  box-shadow: 0 0 10px #ddd;
+}
+.navbar .container .navbar-brand img {
+  width: 100px;
+  margin: 0 10px;
+}
+.navbar-brand {
+  color: #fff;
+}
+.navbar .navbar-nav .nav-link {
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+}
+.navbar .navbar-nav .nav-link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #33d1cc;
+  left: -100%;
+  bottom: 0;
+  transition: 0.4s;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:hover::before {
+  color: var(--green-color);
+  left: 0;
+}
+.navbar .container .search:hover i {
+  color: var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: #fff;
+  font-size: 25px;
+  border: #fff;
+}
+.navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+} /*navbar*/
+/* ========================= */
+/* landing */
+.landing {
+  padding-top: 100px;
+  background-color: #f9fbfd;
+  height: calc(100vh - 92px);
+}
+.landing .container img {
+  width: 500px;
+  /* max-width: 100%; */
+  max-width: 100%;
+  transform: translateY(100px);
+}
+.landing .container .text {
+  transform: translateY(100px);
+}
+.landing .container .main-btn:hover {
+  background-color: black;
+  transition: 0.4s;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+@media (max-width: 767px) {
+  .landing .container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .landing .container .text {
+    text-align: center;
+  }
+}
+/* landing */
